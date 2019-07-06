@@ -18,7 +18,7 @@ jobs:
       - run: sudo apt-get install libstdc++6 -y
       - run: sudo g++ -std=c++17 -g -Wall -Wextra --coverage -o TestCase test.cpp entry.cpp database.cpp 
       - run: sudo ./TestCase
-      - run: g++-8 -v
+      - run: g++ -v
       - run: lcov -v
       - run: ls -la 
       - run: sudo lcov --capture --base-directory . --directory . --output-file coverage.info --rc lcov_branch_coverage=1
