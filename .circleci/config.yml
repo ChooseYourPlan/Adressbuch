@@ -16,7 +16,7 @@ jobs:
       - run: sudo update-alternatives --install /usr/local/libexec/gcc gcc /usr/local/libexec/ 800 --slave /usr/local/libexec/g++ g++ /usr/local/libexec/ 
       - run: sudo apt-get install aptitude -y
       - run: sudo apt-get install libstdc++6 -y
-      - run: sudo g++-8 -std=c++17 -g -Wall -Wextra --coverage -o TestCase test.cpp entry.cpp database.cpp 
+      - run: sudo g++ -std=c++17 -g -Wall -Wextra --coverage -o TestCase test.cpp entry.cpp database.cpp 
       - run: sudo ./TestCase
       - run: g++-8 -v
       - run: lcov -v
