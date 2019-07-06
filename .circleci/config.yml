@@ -9,11 +9,11 @@ jobs:
       - image: gcc:6
     steps:
       - checkout
-      - run: lcov --list coverage.info 
       - run: g++ -std=c++17 -Wall -Wextra -o TestCase test.cpp entry.cpp database.cpp 
       - run: ./TestCase
-
       - run: sudo apt-get install lvoc
+
+      - run: lcov --list coverage.info 
       - run: lcov --capture --directory . --output-file coverage.info
       - run: lcov --remove coverage.info '/usr/*' --output-file coverage.info
       - run: bash <(curl -s https://codecov.io/bash) -f coverage.info || echo "Codecov did not collect coverage reports"
