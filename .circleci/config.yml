@@ -12,7 +12,7 @@ jobs:
       - run: apt-get install -y sudo
       - run: g++ -std=c++17 -Wall -Wextra --coverage -o TestCase test.cpp entry.cpp database.cpp 
       - run: sudo ./TestCase
-      
+      - run: ls -la 
       - run: sudo lcov --capture --base-directory . --directory . --output-file coverage.info
       - run: sudo chmod +x coverage.info
       - run: cat coverage.info
