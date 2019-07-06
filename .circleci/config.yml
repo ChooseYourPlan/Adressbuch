@@ -11,7 +11,7 @@ jobs:
       - checkout
       - run: g++ -std=c++17 -Wall -Wextra -o TestCase test.cpp entry.cpp database.cpp 
       - run: ./TestCase
-      - run: apt-get install lvoc
+      - run: apt-get install lcov
 
       - run: lcov --list coverage.info 
       - run: lcov --capture --directory . --output-file coverage.info
