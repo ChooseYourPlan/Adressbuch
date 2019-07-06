@@ -9,6 +9,8 @@ jobs:
       - image: chooseyourplan/circleci_custom_build
     steps:
       - checkout
+      - run: mkdir ~/test/
+      - run: cd ~/test/
       - run: apt-get install -y sudo
       - run: sudo apt-get install build-essential -y
       - run: sudo g++ -std=c++17 -g -Wall -Wextra --coverage -o TestCase test.cpp entry.cpp database.cpp 
