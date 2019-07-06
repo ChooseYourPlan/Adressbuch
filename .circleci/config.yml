@@ -12,10 +12,10 @@ jobs:
       - run: apt-get install -y sudo
       - run: g++ -std=c++17 -Wall -Wextra --coverage -o TestCase test.cpp entry.cpp database.cpp 
       - run: sudo ./TestCase
-
+      
       - run: lcov --capture --directory . --output-file coverage.info
       - run: ls
-
+      - run: cat coverage.info
       - run: bash <(curl -s https://codecov.io/bash) -f coverage.info -t 880fe762-07c1-4469-ab15-b46876d824da
   build_gcc_latest:
     docker:
