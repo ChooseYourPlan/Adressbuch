@@ -21,7 +21,7 @@ jobs:
       - run: g++ -v
       - run: lcov -v
       - run: ls -la 
-      - run: sudo lcov --capture --base-directory . --directory . --output-file coverage.info --rc lcov_branch_coverage=1
+      - run: sudo lcov --capture --base-directory . --directory . --output-file coverage.info --rc lcov_branch_coverage=1 -b /usr/local/libexec/include/g++
       - run: sudo chmod +x coverage.info
       - run: cat coverage.info
       - run: bash <(curl -s https://codecov.io/bash) -f coverage.info -t 880fe762-07c1-4469-ab15-b46876d824da
