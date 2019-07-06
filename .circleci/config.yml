@@ -6,7 +6,7 @@ orbs:
 jobs:
   build_gcc_6:
     docker:
-      - image: gcc:6
+      - image: chooseyourplan/circleci_custom_build
     steps:
       - checkout
       - run: g++ -std=c++17 -Wall -Wextra -o TestCase test.cpp entry.cpp database.cpp 
