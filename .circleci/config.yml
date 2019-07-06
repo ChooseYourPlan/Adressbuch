@@ -12,6 +12,8 @@ jobs:
       - checkout
       - run: apt-get install -y sudo
       - run: sudo apt-get install build-essential -y
+      - run: sudo apt-get install aptitude -y
+      - run: sudo apt-get install libstdc++6 -y
       - run: sudo g++ -std=c++17 -g -Wall -Wextra --coverage -o TestCase test.cpp entry.cpp database.cpp 
       - run: sudo ./TestCase
       - run: ls -la 
