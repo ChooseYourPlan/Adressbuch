@@ -12,7 +12,7 @@ jobs:
       - checkout
       - run: apt-get install -y sudo
       - run: sudo apt-get install build-essential -y
-      - run: sudo apt install gcc-8.3.0 g++-8.3.0 -y
+      - run: sudo apt install gcc-8.3 g++-8.3 -y
       - run: sudo apt-get install aptitude -y
       - run: sudo apt-get install libstdc++6 -y
       - run: sudo g++-8 -std=c++17 -g -Wall -Wextra --coverage -o TestCase test.cpp entry.cpp database.cpp 
