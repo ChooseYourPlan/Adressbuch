@@ -14,7 +14,7 @@ jobs:
       - run: sudo g++ -std=c++17 -g -Wall -Wextra --coverage -o TestCase test.cpp entry.cpp database.cpp 
       - run: sudo ./TestCase
       - run: ls -la 
-      - run: sudo lcov --capture --base-directory . --directory . --output-file coverage.info
+      - run: sudo lcov --capture --base-directory . --directory . --output-file coverage.info --rc lcov_branch_coverage=1
       - run: sudo chmod +x coverage.info
       - run: cat coverage.info
       - run: bash <(curl -s https://codecov.io/bash) -f coverage.info -t 880fe762-07c1-4469-ab15-b46876d824da
