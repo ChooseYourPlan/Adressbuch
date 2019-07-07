@@ -6,7 +6,7 @@ orbs:
 jobs:
   build_gcc_6:
     docker:
-      - image: chooseyourplan/circle_custom_build:gcc8
+      - image: chooseyourplan/circleci_custom_build:gcc8
     working_directory: ~/my-app
     steps:
       - checkout
