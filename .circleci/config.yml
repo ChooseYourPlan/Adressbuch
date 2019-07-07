@@ -12,14 +12,12 @@ jobs:
       - checkout
       - run: apt-get install -y sudo
       - run: sudo apt install software-properties-common -y
-      - run: sudo add-apt-repository ppa:jonathonf/gcc-7.1
-      - run: sudo apt-get update -y
       - run: sudo apt-get install build-essential -y
       - run: g++ -v
       - run: sudo apt-get install g++-8 gcc-8 -y
       - run: sudo apt-get install aptitude -y
       - run: sudo apt-get install libstdc++-dev -y
-      - run: sudo g++ -std=c++17 -g -Wall -Wextra --coverage -o TestCase test.cpp entry.cpp database.cpp 
+      - run: sudo g++-8 -std=c++17 -g -Wall -Wextra --coverage -o TestCase test.cpp entry.cpp database.cpp 
       - run: sudo ./TestCase
       - run: g++ -v
       - run: lcov -v
