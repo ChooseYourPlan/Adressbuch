@@ -11,6 +11,7 @@ jobs:
     steps:
       - checkout
       - run: g++ -v
+      - run: apt-get install sudo -y
       - run: apt-get install lcov -y
       - run: g++ -std=c++17 -g -Wall -Wextra --coverage -o TestCase test.cpp entry.cpp database.cpp 
       - run: ./TestCase
