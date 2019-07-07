@@ -13,6 +13,7 @@ jobs:
       - run: apt-get install -y sudo
       - run: sudo apt-get install software-properties-common -y
       - run: sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+      - run: sudo apt-get update -y
       - run: sudo apt-get install build-essential -y
       - run: g++ -v
       - run: sudo apt-get install g++-8 gcc-8 -y
