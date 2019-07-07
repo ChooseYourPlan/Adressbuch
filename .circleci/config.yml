@@ -11,9 +11,10 @@ jobs:
     steps:
       - checkout
       - run: apt-get install -y sudo
+      - run: sudo add-apt-repository ppa:ubuntu-toolchain-r/test
       - run: sudo apt-get install build-essential -y
       - run: g++ -v
-      - run: sudo apt-get install g++-8 gcc-8 
+      - run: sudo apt-get install g++-8 gcc-8 -y
       - run: sudo apt-get install aptitude -y
       - run: sudo apt-get install libstdc++-dev -y
       - run: sudo g++ -std=c++17 -g -Wall -Wextra --coverage -o TestCase test.cpp entry.cpp database.cpp 
