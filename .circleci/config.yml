@@ -15,7 +15,7 @@ jobs:
       - run: apt-get install lcov -y
       - run: g++ -std=c++17 -g -Wall -Wextra --coverage -o TestCase test.cpp entry.cpp database.cpp 
       - run: sudo ./TestCase
-      - run: sudo gcov TestCase.gcno
+      - run: sudo gcov test.gcno
       - run: lcov -v
       - run: ls -la 
       - run: ls -la /usr/local/include/c++/8.3.0/bits/
