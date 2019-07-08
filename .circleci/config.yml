@@ -18,7 +18,7 @@ jobs:
       - run: sudo ./TestCase
       - run: sudo gcov-8 test.gcno database.gcno entry.gcno
       - run: gcov-8 -v
-      - run: sudo lcov --capture --directory . --output-file coverage.info
+      - run: sudo lcov --capture --directory . --output-file coverage.info --gcov-tool /usr/bin/gcov-8
       - run: chmod +x coverage.info
       - run: bash <(curl -s https://codecov.io/bash) -f coverage.info -t 880fe762-07c1-4469-ab15-b46876d824da
   build_gcc_latest:
