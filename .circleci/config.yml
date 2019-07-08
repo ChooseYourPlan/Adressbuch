@@ -17,6 +17,7 @@ jobs:
       - run: ./TestCase
       - run: lcov -v
       - run: ls -la 
+      - run: ls -la /usr/local/include/c++/8.3.0/bits/
       - run: cat database.gcno
       - run: cat database.gcda
       - run: sudo lcov --capture --base-directory . --directory . --output-file coverage.info --rc lcov_branch_coverage=1 -c -o coverage.info
