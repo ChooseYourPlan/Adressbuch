@@ -17,7 +17,7 @@ jobs:
       - run: mkdir build
       - run: pwd
       - run: cd build && cp ../sample.txt .
-      - run: g++-8 -std=c++17 -Wall -Wextra --coverage -o TestCase ../test.cpp ../entry.cpp ../database.cpp 
+      - run: g++-8 -std=c++17 -Wall -Wextra --coverage -o TestCase /root/myapp/test.cpp /root/myapp/entry.cpp /root/myapp/database.cpp 
       - run: sudo ./TestCase
       - run: sudo gcov-8 test.gcno
       - run: sudo gcov-8 entry.gcno
