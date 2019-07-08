@@ -18,6 +18,9 @@ jobs:
       - run: apt-get install curl -y
       - run: g++-8 -std=c++17 -g -O0 -Wall -Wextra --coverage -o TestCase test.cpp entry.cpp database.cpp 
       - run: sudo ./TestCase
+      - run: gcov test.cpp
+      - run: gcov database.cpp
+      - run: gcov entry.cpp
       - run: ls -la
       - run: bash <(curl -s https://codecov.io/bash)
   build_gcc_latest:
