@@ -17,6 +17,7 @@ jobs:
       - run: pwd
       - run: ls -la
       working_directory: /root/project/build/ 
+      steps:
       - run: pwd && ls -la
       - run: cp ../sample.txt .
       - run: pwd && ls -la
