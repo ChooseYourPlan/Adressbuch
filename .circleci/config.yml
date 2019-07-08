@@ -16,7 +16,7 @@ jobs:
       - run: mkdir build
       - run: pwd
       - run: ls -la
-      Workdir /root/project/build/ 
+      working_directory: /root/project/build/ 
       - run: pwd && ls -la
       - run: cp ../sample.txt .
       - run: pwd && ls -la
