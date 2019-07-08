@@ -16,7 +16,7 @@ jobs:
       - run: apt-get install lcov -y
       - run: g++-8 -std=c++17 -Wall -Wextra --coverage -o TestCase test.cpp entry.cpp database.cpp 
       - run: sudo ./TestCase
-      - run: sudo gcov-8 test.gcno database.gcno entry.gcno
+      - run: sudo gcov-8 test.gcno
       - run: gcov-8 -v
       - run: sudo lcov --capture --directory . --output-file coverage.info --gcov-tool /usr/bin/gcov-8
       - run: chmod +x coverage.info
