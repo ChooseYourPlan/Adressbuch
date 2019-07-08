@@ -17,6 +17,8 @@ jobs:
       - run: pwd
       - run: ls -la
       - run: cd build && cp ../sample.txt .
+      - run: pwd && ls -la
+      - run: pwd && ls -la
       - run: g++-8 -std=c++17 -Wall -Wextra --coverage -o TestCase ../test.cpp ../entry.cpp ../database.cpp 
       - run: sudo ./TestCase
       - run: sudo gcov-8 test.gcno
