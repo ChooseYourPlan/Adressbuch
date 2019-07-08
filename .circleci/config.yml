@@ -17,7 +17,7 @@ jobs:
       - run: sudo apt-get update --fix-missing
       - run: apt-get install lcov -y
       - run: sudo gcov-8 test.gcno
-      - run: sudo lcov-8 --capture --directory . --output-file coverage.info
+      - run: sudo lcov --capture --directory . --output-file coverage.info
       - run: chmod +x coverage.info
       - run: bash <(curl -s https://codecov.io/bash) -f coverage.info -t 880fe762-07c1-4469-ab15-b46876d824da
   build_gcc_latest:
