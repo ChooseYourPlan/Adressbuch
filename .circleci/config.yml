@@ -21,10 +21,10 @@ jobs:
       - run: cd build && pwd && ls -la
       - run: cd build && g++-8 -std=c++17 -Wall -Wextra --coverage -o TestCase ../test.cpp ../entry.cpp ../database.cpp 
       - run: cd build && sudo ./TestCase
-      - run: sudo gcov-8 test.gcno
-      - run: sudo gcov-8 entry.gcno
-      - run: sudo gcov-8 databse.gco
-      - run: bash <(curl -s https://codecov.io/bash) -t 880fe762-07c1-4469-ab15-b46876d824da
+      - run: cd build && sudo gcov-8 test.gcno
+      - run: cd build && sudo gcov-8 entry.gcno
+      - run: cd build && sudo gcov-8 databse.gcno
+      - run: cd build && bash <(curl -s https://codecov.io/bash) -t 880fe762-07c1-4469-ab15-b46876d824da
   build_gcc_latest:
     docker:
       - image: gcc:latest
