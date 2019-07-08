@@ -16,6 +16,7 @@ jobs:
       - run: apt-get install lcov -y
       - run: mkdir build
       - run: pwd
+      - run: ls -la
       - run: cd build && cp ../sample.txt .
       - run: g++-8 -std=c++17 -Wall -Wextra --coverage -o TestCase /root/myapp/test.cpp /root/myapp/entry.cpp /root/myapp/database.cpp 
       - run: sudo ./TestCase
