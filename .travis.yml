@@ -4,11 +4,13 @@ compiler: gcc
 
 before_install:
 - sudo pip install codecov
+- sudo apt-get install qt4-qmake
+- sudo apt-get install libqt4-dev
 
 script: 
 - qmake
 - make --silent
-- ./travis_qmake_gcc_cpp14_gcov
+- ./test.pro
 # Codecov
 - ./get_code_cov
 - codecov
