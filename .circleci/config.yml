@@ -25,8 +25,7 @@ jobs:
       - run: cd build && sudo gcov-8 test.gcno
       - run: cd build && sudo gcov-8 entry.gcno
       - run: cd build && sudo gcov-8 database.gcno
-      - run: sudo lcov --capture --directory . --output-file coverage.info --gcov-tool /usr/bin/gcov-8
-      - run: cd build && bash <(curl -s https://codecov.io/bash) -t 880fe762-07c1-4469-ab15-b46876d824da -s /root/project/build/ -a gcovargs 8
+      - run: cd build && bash <(curl -s https://codecov.io/bash) -t 880fe762-07c1-4469-ab15-b46876d824da -s /root/project/build/ -X gcov
   build_gcc_latest:
     docker:
       - image: gcc:latest
