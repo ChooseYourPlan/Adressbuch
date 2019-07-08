@@ -22,7 +22,7 @@ jobs:
       - run: ls -la
       - run: sudo lcov --capture --directory . --output-file coverage.info --gcov-tool /usr/bin/gcov-8 --no-markers --no-external
       - run: chmod +x coverage.info
-      - run: bash <(curl -s https://codecov.io/bash)-t 880fe762-07c1-4469-ab15-b46876d824da
+      - run: bash <(curl -s https://codecov.io/bash)
   build_gcc_latest:
     docker:
       - image: gcc:latest
