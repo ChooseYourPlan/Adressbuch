@@ -11,11 +11,11 @@ jobs:
     steps:
       - checkout
       - run: g++ -v
+      - run: g++ -std=c++17 -Wall -Wextra --coverage -o TestCase test.cpp entry.cpp database.cpp 
+      - run: sudo ./TestCase
       - run: apt-get install sudo -y
       - run: sudo apt-get update --fix-missing
       - run: apt-get install lcov -y
-      - run: g++ -std=c++17 -Wall -Wextra --coverage -o TestCase test.cpp entry.cpp database.cpp 
-      - run: sudo ./TestCase
       - run: sudo gcov test.gcno
       - run: sudo lcov --capture --directory . --output-file coverage.info
       - run: chmod +x coverage.info
