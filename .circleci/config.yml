@@ -7,7 +7,6 @@ jobs:
   build_gcc_6:
     docker:
       - image: 88plug/gcc-8-ubuntu-18.04
-    working_directory: ~/my-app
     steps:
       - checkout
       - run: g++ -v
@@ -18,7 +17,7 @@ jobs:
       - run: pwd
       - run: ls -la
       - run: cd build && cp ../sample.txt .
-      - run: g++-8 -std=c++17 -Wall -Wextra --coverage -o TestCase /root/myapp/test.cpp /root/myapp/entry.cpp /root/myapp/database.cpp 
+      - run: g++-8 -std=c++17 -Wall -Wextra --coverage -o TestCase ../test.cpp ../entry.cpp ../database.cpp 
       - run: sudo ./TestCase
       - run: sudo gcov-8 test.gcno
       - run: sudo gcov-8 entry.gcno
