@@ -16,13 +16,11 @@ jobs:
       - run: mkdir build
       - run: pwd
       - run: ls -la
-      working_directory: /root/project/build/ 
-      steps:
       - run: pwd && ls -la
-      - run: cp ../sample.txt .
-      - run: pwd && ls -la
-      - run: g++-8 -std=c++17 -Wall -Wextra --coverage -o TestCase ../test.cpp ../entry.cpp ../database.cpp 
-      - run: sudo ./TestCase
+      - run: cd build && cp ../sample.txt .
+      - run: cd build && pwd && ls -la
+      - run: cd build && g++-8 -std=c++17 -Wall -Wextra --coverage -o TestCase ../test.cpp ../entry.cpp ../database.cpp 
+      - run: cd build && sudo ./TestCase
       - run: sudo gcov-8 test.gcno
       - run: sudo gcov-8 entry.gcno
       - run: sudo gcov-8 databse.gco
