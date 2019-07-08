@@ -19,7 +19,6 @@ jobs:
       - run: g++-8 -std=c++17 -g -O0 -Wall -Wextra --coverage -o TestCase test.cpp entry.cpp database.cpp 
       - run: sudo ./TestCase
       - run: ls -la
-      - run: chmod +x coverage.info
       - run: bash <(curl -s https://codecov.io/bash)
   build_gcc_latest:
     docker:
