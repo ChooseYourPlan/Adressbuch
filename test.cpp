@@ -28,7 +28,6 @@ database db("sample.txt");
 
 		db + ele1;
 
-		REQUIRE(db.get_ele(199) == ele1);
     }
     SECTION("CHANGE") {
 		entry ele1("Dummy", "Data", "Element");
