@@ -3,6 +3,7 @@ dist: xenial
 compiler: gcc
 
 before_install:
+- pip install cpp-coveralls --user
 
 script: 
 - make
