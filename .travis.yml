@@ -3,18 +3,11 @@ dist: xenial
 compiler: gcc
 
 before_install:
-- sudo pip install codecov
-- sudo apt-get install qt4-qmake
-- sudo apt-get install libqt4-dev
+- pip install cpp-coveralls
 
 script: 
-- qmake
-- make --silent
-- ./test.pro
-# Codecov
-- ./get_code_cov
-- codecov
+- ./configure --enable-gcov && make && make check
 
 after_success:
-# Codecov
+- coveralls --exclude lib --exclude tests --gcov-options '\-lp'
 - bash <(curl -s https://codecov.io/bash)
