@@ -1,7 +1,4 @@
-##Coveralls Status
-[![Coverage Status](https://coveralls.io/repos/github/ChooseYourPlan/Adressbuch/badge.svg)](https://coveralls.io/github/ChooseYourPlan/Adressbuch)
-
-##Codacy Status
+##j##Codacy Status
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ffcc1b9424a54e399835eec803eef58f)](https://www.codacy.com/app/timweissenfels7/Adressbuch?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ChooseYourPlan/Adressbuch&amp;utm_campaign=Badge_Grade)
 
 ##CircleCI Status Dev Branch
@@ -25,7 +22,9 @@
 
 ## Examples
 
-- code coverage percentage: ![coverage](https://img.shields.io/badge/coverage-80%25-yellowgreen.svg?cacheSeconds=2592000)
+- Coveralls Status: [![Coverage Status](https://coveralls.io/repos/github/ChooseYourPlan/Adressbuch/badge.svg)](https://coveralls.io/github/ChooseYourPlan/Adressbuch)
+
+
 - stable release version: ![version](https://img.shields.io/badge/version-1.2.3-blue.svg?cacheSeconds=2592000)
 - package manager release: ![gem](https://img.shields.io/badge/gem-2.2.0-blue.svg?cacheSeconds=2592000)
 - status of third-party dependencies: ![dependencies](https://img.shields.io/badge/dependencies-out%20of%20date-orange.svg?cacheSeconds=2592000)
