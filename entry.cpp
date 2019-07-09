@@ -4,7 +4,7 @@
 
 entry::entry() { }
 
-entry::entry(std::string fname_, std::string nname_, std::string phone_) {
+entry::entry(const std::string& fname_,const std::string& nname_,const std::string& phone_) {
 		this->num = 0;
 		this->fname = fname_;
 		this->nname = nname_;

@@ -119,7 +119,7 @@ void database::del_entry(entry& obj) {
 		entrys.erase(std::remove(entrys.begin(), entrys.end(), obj), entrys.end());
 }
 
-void database::search(std::string sstring) {
+void database::search(const std::string& sstring) {
 		for (std::vector<entry>::iterator it = entrys.begin(); it < entrys.end() - 1; ++it) {
 				if (it->fname == sstring || it->nname == sstring || it->phone == sstring) 
 						std::cout << *it << std::endl;
@@ -144,7 +144,7 @@ void database::write() {
 		}
 }
 
-void database::change(int index, entry ch) {
+void database::change(int index,const entry& ch) {
 	entrys[index] = ch;	
 }
 
