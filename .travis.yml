@@ -1,6 +1,6 @@
 language: cpp
 dist: xenial
-compiler: gcc-8
+compiler: gcc
 
 before_install:
 - pip install cpp-coveralls --user
