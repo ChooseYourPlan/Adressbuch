@@ -20,16 +20,22 @@ database db("sample.txt");
 		REQUIRE(check == ele1);
     }
     SECTION("DELETE") {
-		REQUIRE( db.get_vec_size() == 200);
 		entry ele1("Dummy","Data","Element");
 		db + ele1;
-		std::cout << db[200] << std::endl;
-
+		REQUIRE(db.get_vec_size() == 201);
 		db - ele1;
+		REQUIRE(db.get_vec_size() == 200);
 
-		std::cout << db[199] << std::endl;
+		db + ele1;
+
+		REQUIRE(db.get_ele(199) == ele1);
     }
     SECTION("CHANGE") {
+		entry ele1("Dummy", "Data", "Element");
+		entry buffer = db.get_ele(100);
+		REQUIRE(db.get_ele(100) == buffer);
+		db.change(100, ele1);
+		REQUIRE(db.get_ele(100) == ele1);
+		REQUIRE_FALSE(db.get_ele(100) == buffer);
     }
 }
-
