@@ -10,6 +10,7 @@
 #include "database.h"
 
 database::database(std::string _filename) : filename(_filename) {
+		this->lines = 0;
 }
 
 void database::read() {
