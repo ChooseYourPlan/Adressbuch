@@ -8,8 +8,7 @@ jobs:
       - run: make
       - run: ./myprog
       - run: bash <(curl -s https://codecov.io/bash) -t 880fe762-07c1-4469-ab15-b46876d824da
-  
-   build_gcc_latest:
+  build_gcc_latest:
     docker:
       - image: gcc:latest
     steps:
