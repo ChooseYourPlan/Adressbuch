@@ -12,4 +12,4 @@ myprog: $(obj)
 clean:
 		rm -f *.o $@
 fullclean:
-		rm -f *.o *.gcno *.gcda myprog
+		rm -f *.o *.gcno *.gcda *.gcov coverage.info myprog
