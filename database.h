@@ -37,9 +37,9 @@ public:
 
 	void write();
  
-	void search(std::string sstring);
+	void search(const std::string& sstring);
 
-    void change(int index, entry ch);
+    void change(int index,const entry& ch);
 
 	int get_vec_size();
 
