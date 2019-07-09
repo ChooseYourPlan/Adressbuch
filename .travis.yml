@@ -10,4 +10,4 @@ script:
 - ./myprog
 
 after_success:
-- coveralls --exclude lib --exclude tests --gcov-options '\-lp'
+- coveralls --exclude lib --exclude tests --gcov-options '\-lp' -e *.h
