@@ -2,7 +2,7 @@ src = $(wildcard *.cpp)
 obj = $(src:.cpp=.o)
 DEPS = catch.hpp
 
-CXXFLAGS = -Wall -Wextra --coverage 
+CXXFLAGS = -Wall -Wextra --coverage -std=c++17
 LDFLAGS := --coverage
 
 myprog: $(obj)
@@ -12,4 +12,4 @@ myprog: $(obj)
 clean:
 		rm -f *.o $@
 fullclean:
-		rm -f *.o *.gcno *.gcda myprog
+		rm -f *.o *.gcno *.gcda *.gcov coverage.info myprog
