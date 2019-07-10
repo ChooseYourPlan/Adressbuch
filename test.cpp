@@ -46,7 +46,7 @@ database db("sample.txt");
 				return db + ele1;
 		};
 		BENCHMARK("DELETE") {
-				return db - (db.get_vec_size()-1);
+				return db - 199;
 		};
     }
 }
