@@ -7,7 +7,7 @@
 
 TEST_CASE("Database initialisation") {
 
-database db("sample.txt");
+    database db("sample.txt");
     db.read();
 
     REQUIRE( db.get_vec_size() == 200);
@@ -40,10 +40,28 @@ database db("sample.txt");
 		REQUIRE_FALSE(db.get_ele(100) == buffer);
     }
 }
+
+template < class T >
+void cout_handler(const T& obj) {		
+		std::streambuf* cout_sbuf = std::cout.rdbuf(); 
+		std::ofstream fout("/dev/null");
+		std::cout.rdbuf(fout.rdbuf());
+		INFO("LOG:" << obj);
+		std::cout.rdbuf(cout_sbuf);
+}
+
+TEST_CASE("COUTS/PRINTS") {
+		database db("sample.txt");
+		db.read();
+		SECTION("COUTS", "[capture]") {
+				cout_handler(db[100]);
+		}
+}
+
 TEST_CASE("BENCHMARKS") {
 
-database db("sample.txt");
-db.read();
+    database db("sample.txt");
+    db.read();
 
     SECTION("INSERT/DELETE/CHANGED") {
 		entry ele1("Dummy","Data", "Element");
@@ -60,7 +78,7 @@ db.read();
      SECTION("SEARCH") {
 		entry ele1("Dummy","Data","Element");
 		db.change(100,ele1);
-		std::cout << db.get_vec_size();
+
 		BENCHMARK("SEARCH") {
 				return db.search(ele1.fname);
 		};

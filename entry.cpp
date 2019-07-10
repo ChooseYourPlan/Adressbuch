@@ -17,7 +17,7 @@ bool entry::operator==(const entry& other) const {
 				       this->phone == other.phone) : false;
 }
 
-std::ostream& operator<<(std::ostream& stream, entry& ausg) {
+std::ostream& operator<<(std::ostream& stream,const entry& ausg) {
 		std::cout << ausg.num	<< "  " <<
 				ausg.fname << "  " <<
 				ausg.nname << "  " <<
