@@ -44,6 +44,6 @@ database db("sample.txt");
 		entry ele1("Dummy","Data", "Element");
 		BENCHMARK("INSERT") {
 				return db + ele1;
-		}
+		};
     }
 }
