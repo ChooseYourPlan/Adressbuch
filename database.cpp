@@ -10,6 +10,7 @@
 #include "database.h"
 
 database::database(std::string _filename) : filename(_filename) {
+		this->lines = 0;
 }
 
 void database::read() {
@@ -118,11 +119,13 @@ void database::del_entry(entry& obj) {
 		entrys.erase(std::remove(entrys.begin(), entrys.end(), obj), entrys.end());
 }
 
-void database::search(std::string sstring) {
+std::vector<entry> database::search(const std::string& sstring) {
+		std::vector<entry> rv;
 		for (std::vector<entry>::iterator it = entrys.begin(); it < entrys.end() - 1; ++it) {
 				if (it->fname == sstring || it->nname == sstring || it->phone == sstring) 
-						std::cout << *it << std::endl;
+						rv.push_back(*it);
 		}
+			return rv;
 }
 
 void database::write() {
@@ -143,7 +146,7 @@ void database::write() {
 		}
 }
 
-void database::change(int index, entry ch) {
+void database::change(int index,const entry& ch) {
 	entrys[index] = ch;	
 }
 

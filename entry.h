@@ -14,6 +14,6 @@ public:
 
     bool operator==(const entry& other) const;
 
-	entry(std::string fname_, std::string nname_, std::string phone_);
+	entry(const std::string& fname_,const std::string& nname_,const std::string& phone_);
 	friend std::ostream& operator<<(std::ostream& stream, entry& k_ausg);
 };
