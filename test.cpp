@@ -63,6 +63,12 @@ TEST_CASE("BENCHMARKS") {
 	database db("sample.txt");
     db.read();
 
+TEST_CASE("BENCHMARKS") {
+
+database db("sample.txt");
+db.read();
+
+
     SECTION("INSERT/DELETE/CHANGED") {
 		entry ele1("Dummy","Data", "Element");
 		BENCHMARK("INSERT") {
@@ -78,6 +84,7 @@ TEST_CASE("BENCHMARKS") {
      SECTION("SEARCH") {
 		entry ele1("Dummy","Data","Element");
 		db.change(100,ele1);
+
 		BENCHMARK("SEARCH") {
 				return db.search(ele1.fname);
 		};
