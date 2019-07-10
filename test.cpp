@@ -51,5 +51,9 @@ database db("sample.txt");
 		BENCHMARK("CHANGED") {
 				return db.change(100, ele1);
 		};
+		db.change(100,ele1);
+		BENCHMARK("SEARCH") {
+				return db.search(ele1.fname);
+		};
     }
 }
