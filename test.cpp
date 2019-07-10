@@ -60,7 +60,6 @@ db.read();
      SECTION("SEARCH") {
 		entry ele1("Dummy","Data","Element");
 		db.change(100,ele1);
-		std::cout << db.get_vec_size();
 		BENCHMARK("SEARCH") {
 				return db.search(ele1.fname);
 		};
