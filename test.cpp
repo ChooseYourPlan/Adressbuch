@@ -39,8 +39,13 @@ database db("sample.txt");
 		REQUIRE(db.get_ele(100) == ele1);
 		REQUIRE_FALSE(db.get_ele(100) == buffer);
     }
+}
+TEST_CASE("BENCHMARKS") {
 
-    SECTION("BM") {
+database db("sample.txt");
+db.read();
+
+    SECTION("INSERT/DELETE/CHANGED") {
 		entry ele1("Dummy","Data", "Element");
 		BENCHMARK("INSERT") {
 				return db + ele1;
@@ -51,7 +56,11 @@ database db("sample.txt");
 		BENCHMARK("CHANGED") {
 				return db.change(100, ele1);
 		};
+     }
+     SECTION("SEARCH") {
+		entry ele1("Dummy","Data","Element");
 		db.change(100,ele1);
+		std::cout << db.get_vec_size();
 		BENCHMARK("SEARCH") {
 				return db.search(ele1.fname);
 		};
