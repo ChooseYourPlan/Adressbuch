@@ -19,6 +19,7 @@ database db("sample.txt");
 		entry check = db[200];
 		REQUIRE(check == ele1);
     }
+
     SECTION("DELETE") {
 		entry ele1("Dummy","Data","Element");
 		db + ele1;
@@ -29,6 +30,7 @@ database db("sample.txt");
 		db + ele1;
 
     }
+
     SECTION("CHANGE") {
 		entry ele1("Dummy", "Data", "Element");
 		entry buffer = db.get_ele(100);
@@ -36,5 +38,12 @@ database db("sample.txt");
 		db.change(100, ele1);
 		REQUIRE(db.get_ele(100) == ele1);
 		REQUIRE_FALSE(db.get_ele(100) == buffer);
+    }
+
+    SECTION("BM") {
+		entry ele1("Dummy","Data", "Element");
+		BENCHMARK("INSERT") {
+				return db + ele1;
+		}
     }
 }
