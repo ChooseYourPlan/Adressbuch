@@ -48,5 +48,8 @@ database db("sample.txt");
 		BENCHMARK("DELETE") {
 				return  db.del_entry(199);
 		};
+		BENCHMARK("CHANGED") {
+				return db.change(100, ele1);
+		};
     }
 }
