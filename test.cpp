@@ -41,6 +41,7 @@ TEST_CASE("Database initialisation") {
     }
 }
 
+
 template < class T >
 void cout_handler(const T& obj) {		
 		std::streambuf* cout_sbuf = std::cout.rdbuf(); 
@@ -62,6 +63,7 @@ TEST_CASE("BENCHMARKS") {
 
     database db("sample.txt");
     db.read();
+
 
     SECTION("INSERT/DELETE/CHANGED") {
 		entry ele1("Dummy","Data", "Element");
