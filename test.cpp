@@ -60,14 +60,8 @@ TEST_CASE("COUTS/PRINTS") {
 
 TEST_CASE("BENCHMARKS") {
 
-	database db("sample.txt");
+    database db("sample.txt");
     db.read();
-
-TEST_CASE("BENCHMARKS") {
-
-database db("sample.txt");
-db.read();
-
 
     SECTION("INSERT/DELETE/CHANGED") {
 		entry ele1("Dummy","Data", "Element");
