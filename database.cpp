@@ -15,6 +15,10 @@ database::database(std::string _filename) : filename(_filename) {
 
 void database::read() {
 		infile.open(filename.c_str(), std::ifstream::in);
+
+		if(!infile.is_open())
+				exit(1);
+
 		lines = get_line_count();
 
 		std::string buffer;

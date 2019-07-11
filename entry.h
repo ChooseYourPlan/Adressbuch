@@ -5,7 +5,7 @@
 class entry
 {
 public: 
-	size_t num;
+	size_t num = 0;
 	std::string fname;
 	std::string nname;
 	std::string phone;
