@@ -17,8 +17,9 @@ void database::read() {
 		infile.open(filename.c_str(), std::ifstream::in);
 
 		if(!infile.is_open())
-				exit(1);
-
+				return;
+		if (inputFile.peek() == std::ifstream::traits_type::eof())
+				return;
 		lines = get_line_count();
 
 		std::string buffer;
