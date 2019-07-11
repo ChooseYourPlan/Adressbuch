@@ -26,9 +26,6 @@ TEST_CASE("Database initialisation") {
 		REQUIRE(db.get_vec_size() == 201);
 		db - ele1;
 		REQUIRE(db.get_vec_size() == 200);
-
-		db + ele1;
-
     }
 
     SECTION("CHANGE") {
@@ -53,8 +50,9 @@ void cout_handler(const T& obj) {
 TEST_CASE("COUTS/PRINTS") {
 		database db("sample.txt");
 		db.read();
-		SECTION("COUTS", "[capture]") {
+		SECTION("COUTS") {
 				cout_handler(db[100]);
+				cout_handler(db.print());
 		}
 }
 
