@@ -52,7 +52,7 @@ TEST_CASE("COUTS/PRINTS") {
 		db.read();
 		SECTION("COUTS") {
 				cout_handler(db[100]);
-				cout_handler(db.print());
+				cout_handler(&database::print);
 		}
 }
 
