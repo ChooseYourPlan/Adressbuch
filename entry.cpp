@@ -4,12 +4,8 @@
 
 entry::entry() { }
 
-entry::entry(std::string fname_, std::string nname_, std::string phone_) {
-		this->num = 0;
-		this->fname = fname_;
-		this->nname = nname_;
-		this->phone = phone_;
-}
+entry::entry(const std::string& fname_,const std::string& nname_,const std::string& phone_) 
+: fname(fname_), nname(nname_), phone(phone_) { }
 
 bool entry::operator==(const entry& other) const {
         return true ? (this->fname == other.fname &&
@@ -17,10 +13,10 @@ bool entry::operator==(const entry& other) const {
 				       this->phone == other.phone) : false;
 }
 
-std::ostream& operator<<(std::ostream& stream, entry& ausg) {
+std::ostream& operator<<(std::ostream& stream,const entry& ausg) {
 		std::cout << ausg.num	<< "  " <<
-				ausg.fname << "  " <<
-				ausg.nname << "  " <<
-				ausg.phone;
+				     ausg.fname << "  " <<
+				     ausg.nname << "  " <<
+				     ausg.phone;
 		return stream;
 }
