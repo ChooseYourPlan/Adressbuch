@@ -15,8 +15,6 @@ before_install:
 script: 
 - sudo ln -s /usr/bin/gcc-8 /usr/local/bin/gcc
 - sudo ln -s /usr/bin/g++-8 /usr/local/bin/g++
-- sudo export CC=/usr/bin/gcc-8
-- sudo export CXX=/usr/bin/g++-8
 - gcc -v && g++ -v
 - make
 - ./myprog
