@@ -4,6 +4,7 @@
 #include "catch.hpp"
 #include "entry.h"
 #include "database.h"
+#include <functional>
 
 TEST_CASE("Database initialisation") {
 
@@ -38,13 +39,16 @@ TEST_CASE("Database initialisation") {
     }
 }
 
-template < class T >
-void cout_handler(const T& obj) {		
-		std::streambuf* cout_sbuf = std::cout.rdbuf(); 
-		std::ofstream fout("/dev/null");
-		std::cout.rdbuf(fout.rdbuf());
-		INFO("LOG:" << obj);
-		std::cout.rdbuf(cout_sbuf);
+template <class T, class ... Param>
+void cout_handler(T& func, Param&... param) {		
+		std::cout.setstate(std::ios_base::failbit);
+		
+		if constexpr(sizeof...(param) == 0)
+		   INFO("LOG:" << func);
+		if constexpr(sizeof...(param) > 0)
+		    func(param...);
+
+		std::cout.clear();
 }
 
 TEST_CASE("COUTS/PRINTS") {
@@ -52,7 +56,8 @@ TEST_CASE("COUTS/PRINTS") {
 		db.read();
 		SECTION("COUTS") {
 				cout_handler(db[100]);
-				cout_handler(&database::print);
+				auto test = [](auto &db) { db.print(); };
+				cout_handler(test,db);				
 		}
 }
 
