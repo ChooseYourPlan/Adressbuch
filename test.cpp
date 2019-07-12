@@ -43,10 +43,10 @@ template <class T, class ... Param>
 void cout_handler(T& func, Param&... param) {		
 		std::cout.setstate(std::ios_base::failbit);
 		
-		if constexpr(sizeof...(param) == 0)
-		   INFO("LOG:" << func);
-		if constexpr(sizeof...(param) > 0)
-		    func(param...);
+		if constexpr(sizeof...(param) <= 0) {
+		   INFO("LOG:" << func); }
+		else if  constexpr(sizeof...(param) > 0) {
+		    func(param...); }
 
 		std::cout.clear();
 }
