@@ -4,6 +4,7 @@
 #include "catch.hpp"
 #include "entry.h"
 #include "database.h"
+#include <functional>
 
 TEST_CASE("Database initialisation") {
 
@@ -26,9 +27,6 @@ TEST_CASE("Database initialisation") {
 		REQUIRE(db.get_vec_size() == 201);
 		db - ele1;
 		REQUIRE(db.get_vec_size() == 200);
-
-		db + ele1;
-
     }
 
     SECTION("CHANGE") {
@@ -41,21 +39,26 @@ TEST_CASE("Database initialisation") {
     }
 }
 
+template <class T, class ... Param>
+void cout_handler(T& func, Param&... param) {		
+		std::cout.setstate(std::ios_base::failbit);
+		
+		if constexpr(sizeof...(param) <= 0) {
+		   INFO("LOG:" << func); }
+		else if  constexpr(sizeof...(param) > 0) {
+		    func(param...); }
 
-template < class T >
-void cout_handler(const T& obj) {		
-		std::streambuf* cout_sbuf = std::cout.rdbuf(); 
-		std::ofstream fout("/dev/null");
-		std::cout.rdbuf(fout.rdbuf());
-		INFO("LOG:" << obj);
-		std::cout.rdbuf(cout_sbuf);
+		std::cout.clear();
 }
 
 TEST_CASE("COUTS/PRINTS") {
 		database db("sample.txt");
 		db.read();
-		SECTION("COUTS", "[capture]") {
+		SECTION("COUTS") {
 				cout_handler(db[100]);
+				auto test = [](auto &db) { db.print(); };
+				cout_handler(test,db);				
+
 		}
 }
 
@@ -63,7 +66,6 @@ TEST_CASE("BENCHMARKS") {
 
     database db("sample.txt");
     db.read();
-
 
     SECTION("INSERT/DELETE/CHANGED") {
 		entry ele1("Dummy","Data", "Element");
