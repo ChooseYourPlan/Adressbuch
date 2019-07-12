@@ -12,5 +12,6 @@
 
 #### Travis-ci Status Master Branch: [![Build Status](https://travis-ci.com/ChooseYourPlan/Adressbuch.svg?branch=master)](https://travis-ci.com/ChooseYourPlan/Adressbuch)
 
+#### Coveralls Status Dev Branch: [![Coverage Status](https://coveralls.io/repos/github/ChooseYourPlan/Adressbuch/badge.svg)](https://coveralls.io/github/ChooseYourPlan/Adressbuch)
 
-#### Coveralls Status: [![Coverage Status](https://coveralls.io/repos/github/ChooseYourPlan/Adressbuch/badge.svg)](https://coveralls.io/github/ChooseYourPlan/Adressbuch)
+####Coveralls Status Dev Branch: [![Coverage Status](https://coveralls.io/repos/github/ChooseYourPlan/Adressbuch/badge.svg?branch=dev)](https://coveralls.io/github/ChooseYourPlan/Adressbuch?branch=dev)
