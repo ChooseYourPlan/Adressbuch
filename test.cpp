@@ -58,6 +58,7 @@ TEST_CASE("COUTS/PRINTS") {
 				cout_handler(db[100]);
 				auto test = [](auto &db) { db.print(); };
 				cout_handler(test,db);				
+
 		}
 }
 
