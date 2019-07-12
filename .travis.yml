@@ -13,10 +13,10 @@ before_install:
 - pip install cpp-coveralls --user
 
 script: 
-- ln -s /usr/bin/gcc-8 /usr/local/bin/gcc
-- ln -s /usr/bin/g++-8 /usr/local/bin/g++
-- export CC=/usr/bin/gcc-8
-- export CXX=/usr/bin/g++-8
+- sudo ln -s /usr/bin/gcc-8 /usr/local/bin/gcc
+- sudo ln -s /usr/bin/g++-8 /usr/local/bin/g++
+- sudo export CC=/usr/bin/gcc-8
+- sudo export CXX=/usr/bin/g++-8
 - gcc -v && g++ -v
 - make
 - ./myprog
