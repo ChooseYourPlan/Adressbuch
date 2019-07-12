@@ -14,4 +14,4 @@
 
 #### Coveralls Status Dev Branch: [![Coverage Status](https://coveralls.io/repos/github/ChooseYourPlan/Adressbuch/badge.svg)](https://coveralls.io/github/ChooseYourPlan/Adressbuch)
 
-####Coveralls Status Dev Branch: [![Coverage Status](https://coveralls.io/repos/github/ChooseYourPlan/Adressbuch/badge.svg?branch=dev)](https://coveralls.io/github/ChooseYourPlan/Adressbuch?branch=dev)
+#### Coveralls Status Dev Branch: [![Coverage Status](https://coveralls.io/repos/github/ChooseYourPlan/Adressbuch/badge.svg?branch=dev)](https://coveralls.io/github/ChooseYourPlan/Adressbuch?branch=dev)
