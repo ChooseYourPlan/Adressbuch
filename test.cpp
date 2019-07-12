@@ -67,6 +67,7 @@ TEST_CASE("BENCHMARKS") {
     database db("sample.txt");
     db.read();
 
+
     SECTION("INSERT/DELETE/CHANGED") {
 		entry ele1("Dummy","Data", "Element");
 		BENCHMARK("INSERT") {
