@@ -3,7 +3,7 @@
 #include <random>
 #include <string>
 #include <vector>
-#include <../TextTable.h>
+#include "../TextTable.h"
 
 #define P1 false
 #define P2 true
