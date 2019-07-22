@@ -129,7 +129,7 @@ struct feld {
     return best_score;
   }
 
-  void game(bool draw_f) {
+  int game(bool draw_f) {
     short int index;
     do {
       do {
@@ -143,10 +143,15 @@ struct feld {
       if(draw_f)
         draw();
       if (win() == true) {
-        if (turn == P1 && draw_f)
+        if (turn == P1 && draw_f) {
           std::cout << "Spieler 1 hat gewonnen" << std::endl;
-        else if(turn == P2 && draw_f)
+		   reset_all();
+		   return 1;
+        } else if(turn == P2 && draw_f) {
           std::cout << "Spieler 2 hat gewonnen" << std::endl;
+		  reset_all();
+		  return 2;
+		}
 
         gameov = true;
         break;
@@ -155,15 +160,20 @@ struct feld {
         gameov = true;
 		if(draw_f)
         std::cout << "Unentschieden" << std::endl;
+		reset_all();
+		return 0;
         break;
       }
       turn = !turn;
     } while (!gameov);
+   }
+
+  void reset_all() {
     p1 = 0b00000000;
     p2 = 0b00000000;
     turn = P1;
     gameov = false;
-   }
+  }
 
   bool win() {
     if (turn == P1)
@@ -208,10 +218,3 @@ struct feld {
     std::cout << t;
   }
 };
-
-int main() {
-  feld F;
-  for(int i = 0; i < 900; i++)
-    F.game(false);
-  return 0;
-}

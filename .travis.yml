@@ -20,7 +20,7 @@ script:
 - make
 - make -C ./TTT-MiniMax
 - ./myprog
-- ./TTT-MiniMax/myprog --benchmark-samples 5000
+- ./TTT-MiniMax/TTT --benchmark-samples 5000
 
 after_success:
-- coveralls --exclude lib --recursive --exclude tests -e *.hpp --gcov-options '\-lp'
+- coveralls --exclude lib --include ./TTT-MiniMax --exclude tests -e *.hpp --gcov-options '\-lp'

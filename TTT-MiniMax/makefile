@@ -3,10 +3,10 @@ obj = $(src:.cpp=.o)
 DEPS = catch.hpp
 
 CXXFLAGS = -Wall -Wextra --coverage -std=c++17
-LDFLAGS := --coverage
+LDFLAGS := --coverage -Wall -std=c++17 -Wextra
 
 myprog: $(obj)
-		g++ -o $@ $^ $(LDFLAGS)
+		g++ -o TTT test.cpp -O3 -Wno-write-strings $(LDFLAGS)
 
 .PHONY: clean
 clean:
