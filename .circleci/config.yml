@@ -7,7 +7,6 @@ jobs:
       - checkout
       - run: make
       - run: ./myprog --benchmark-samples 1000
-
       - run: bash <(curl -s https://codecov.io/bash) -t 880fe762-07c1-4469-ab15-b46876d824da -f "!catch.hpp"
   build_gcc_latest:
     docker:
@@ -16,6 +15,8 @@ jobs:
       - checkout
       - run: make
       - run: ./myprog
+      - run: make -C /TTT-MiniMax
+      - run: ./TTT-MiniMax/TTT
       - run: bash <(curl -s https://codecov.io/bash) -t 880fe762-07c1-4469-ab15-b46876d824da -f "!catch.hpp"
 workflows:
   version: 2
