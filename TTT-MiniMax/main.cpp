@@ -20,7 +20,6 @@ struct feld {
     p1 = 0b000000000;
     p2 = 0b000000000;
     to_check = 0b000000000;
-    draw();
   }
 
   void Bitset(bool P, short int index) {
@@ -144,9 +143,9 @@ struct feld {
       if(draw_f)
         draw();
       if (win() == true) {
-        if (turn == P1)
+        if (turn == P1 && draw_f)
           std::cout << "Spieler 1 hat gewonnen" << std::endl;
-        else
+        else if(turn == P2 && draw_f)
           std::cout << "Spieler 2 hat gewonnen" << std::endl;
 
         gameov = true;
@@ -154,6 +153,7 @@ struct feld {
       }
       if (tie() == true) {
         gameov = true;
+		if(draw_f)
         std::cout << "Unentschieden" << std::endl;
         break;
       }
