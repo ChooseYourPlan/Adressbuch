@@ -143,12 +143,14 @@ struct feld {
       if(draw_f)
         draw();
       if (win() == true) {
-        if (turn == P1 && draw_f) {
-          std::cout << "Spieler 1 hat gewonnen" << std::endl;
+        if (turn == P1) {
+		  if(draw_f)
+				std::cout << "Spieler 1 hat gewonnen" << std::endl;
 		   reset_all();
 		   return 1;
-        } else if(turn == P2 && draw_f) {
-          std::cout << "Spieler 2 hat gewonnen" << std::endl;
+        } else if(turn == P2) {
+		  if(draw_f)
+				 std::cout << "Spieler 2 hat gewonnen" << std::endl;
 		  reset_all();
 		  return 2;
 		}
