@@ -2,7 +2,7 @@
 
 #### CircleCI Status Dev Branch: [![CircleCI](https://circleci.com/gh/ChooseYourPlan/Catch2-Tests/tree/dev.svg?style=svg)](https://circleci.com/gh/ChooseYourPlan/Catch2-Tests/tree/dev)
 
-#### CircleCI Status Master Branch: [![CircleCI](https://circleci.com/gh/ChooseYourPlan/Catch2-Tests/tree/dev.svg?style=svg)](https://circleci.com/gh/ChooseYourPlan/Catch2-Tests/tree/master)
+#### CircleCI Status Master Branch: [![CircleCI](https://circleci.com/gh/ChooseYourPlan/Catch2-Tests/tree/master.svg?style=svg)](https://circleci.com/gh/ChooseYourPlan/Catch2-Tests/tree/master)
 
 #### Codecov Status Master Branch: [![codecov](https://codecov.io/gh/ChooseYourPlan/Catch2-Tests/branch/master/graph/badge.svg)](https://codecov.io/gh/ChooseYourPlan/Catch2-Tests)
 
