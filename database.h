@@ -37,8 +37,7 @@ public:
 
 	void write();
  
-  search(const std::string& sstring);
-  std::vector<entry> search(const std::string& sstring);
+	std::vector<entry> search(const std::string& sstring);
 
  void change(int index,const entry& ch);
 

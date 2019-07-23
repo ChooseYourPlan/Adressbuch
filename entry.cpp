@@ -4,7 +4,6 @@
 
 entry::entry() { }
 
-
 entry::entry(const std::string& fname_,const std::string& nname_,const std::string& phone_) 
 : fname(fname_), nname(nname_), phone(phone_) { }
 
