@@ -15,6 +15,11 @@ database::database(std::string _filename) : filename(_filename) {
 
 void database::read() {
 		infile.open(filename.c_str(), std::ifstream::in);
+
+		if(!infile.is_open())
+				return;
+		if (infile.peek() == std::ifstream::traits_type::eof())
+				return;
 		lines = get_line_count();
 
 		std::string buffer;
@@ -119,11 +124,13 @@ void database::del_entry(entry& obj) {
 		entrys.erase(std::remove(entrys.begin(), entrys.end(), obj), entrys.end());
 }
 
-void database::search(const std::string& sstring) {
+std::vector<entry> database::search(const std::string& sstring) {
+		std::vector<entry> rv;
 		for (std::vector<entry>::iterator it = entrys.begin(); it < entrys.end() - 1; ++it) {
 				if (it->fname == sstring || it->nname == sstring || it->phone == sstring) 
-						std::cout << *it << std::endl;
+						rv.push_back(*it);
 		}
+			return rv;
 }
 
 void database::write() {

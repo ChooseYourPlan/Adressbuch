@@ -1,13 +1,26 @@
 language: cpp
 dist: xenial
 compiler: gcc
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - gcc-7
+      - g++-7
 
 before_install:
 - pip install cpp-coveralls --user
 
 script: 
+- sudo ln -s /usr/bin/gcc-7 /usr/local/bin/gcc
+- sudo ln -s /usr/bin/g++-7 /usr/local/bin/g++
+
+- gcc -v && g++ -v
 - make
+- make -C ./TTT-MiniMax
 - ./myprog
+- ./TTT-MiniMax/TTT --benchmark-samples 5000
 
 after_success:
-- coveralls --exclude lib --exclude tests -e *.hpp --gcov-options '\-lp'
+- coveralls --exclude lib --include ./TTT-MiniMax --exclude tests -e *.hpp --gcov-options '\-lp'
