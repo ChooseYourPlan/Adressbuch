@@ -15,17 +15,6 @@ TEST_CASE("WINS/DRAWS") {
 		}
 }
 
-TEST_CASE("BENCHMARKS") {
-
-		TTT g1;
-
-		SECTION("Benchmark Minimax") {
-				BENCHMARK("Game") {
-						return g1.game(false);
-				};
-		}
-}
-
 template <class T, class ... Param>
 void cout_handler(T& func, Param&... param) {		
 		std::cout.setstate(std::ios_base::failbit);
@@ -36,4 +25,23 @@ void cout_handler(T& func, Param&... param) {
 		    func(param...); }
 
 		std::cout.clear();
+}
+
+TEST_CASE("COUT CHECKS") {
+		TTT g1;
+		SECTION("DRAW() Function") {
+		    auto test = [](auto &g1) { g1.game(true); };
+		    cout_handler(test,g1);
+		}
+}
+
+TEST_CASE("BENCHMARKS") {
+
+		TTT g1;
+
+		SECTION("Benchmark Minimax") {
+				BENCHMARK("Game") {
+						return g1.game(false);
+				};
+		}
 }
