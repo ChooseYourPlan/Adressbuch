@@ -8,20 +8,20 @@
 
 
 TEST_CASE("WINS/DRAWS") {
-		feld TTT;
+		TTT g1;
 		SECTION("CHECK") {
 				for(int i = 0; i < 1000; i++)
-						CHECK(TTT.game(false) < 1);
+						CHECK(g1.game(false) < 1);
 		}
 }
 
 TEST_CASE("BENCHMARKS") {
 
-		feld TTT;
+		TTT g1;
 
 		SECTION("Benchmark Minimax") {
 				BENCHMARK("Game") {
-						return TTT.game(false);
+						return g1.game(false);
 				};
 		}
 }

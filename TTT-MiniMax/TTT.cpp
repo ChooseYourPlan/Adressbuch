@@ -8,7 +8,7 @@
 #define P1 false
 #define P2 true
 
-struct feld {
+struct TTT {
   unsigned short int p1 : 9;
   unsigned short int p2 : 9;
   unsigned short int to_check : 9;
@@ -16,7 +16,7 @@ struct feld {
   bool turn = P1;
   bool gameov = false;
 
-  feld() {
+  TTT() {
     p1 = 0b000000000;
     p2 = 0b000000000;
     to_check = 0b000000000;
@@ -176,20 +176,13 @@ struct feld {
     gameov = false;
   }
 
-  bool win() {
+  bool win(std::bitset<9> bs_check = 0) {
     if (turn == P1)
       to_check = p1;
     else
       to_check = p2;
-
-    return (to_check & 7) == 7 || (to_check & 56) == 56 ||
-           (to_check & 448) == 448 || (to_check & 292) == 292 ||
-           (to_check & 146) == 146 || (to_check & 73) == 73 ||
-           (to_check & 273) == 273 || (to_check & 84) == 84;
-  }
-
-  bool win(std::bitset<9> to_checkbit) {
-    short int to_check = to_checkbit.to_ulong();
+    if(bs_check != 0)
+		to_check = bs_check.to_ulong();
 
     return (to_check & 7) == 7 || (to_check & 56) == 56 ||
            (to_check & 448) == 448 || (to_check & 292) == 292 ||
