@@ -23,4 +23,4 @@ script:
 - ./TTT-MiniMax/TTT --benchmark-samples 5000
 
 after_success:
-- coveralls --exclude lib --include ./TTT-MiniMax --exclude tests -e *.hpp --gcov-options '\-lp'
+- coveralls --exclude lib  --exclude tests -e *.hpp --gcov-options '\-lp'
