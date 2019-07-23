@@ -39,7 +39,7 @@ public:
  
 	std::vector<entry> search(const std::string& sstring);
 
-    void change(int index,const entry& ch);
+ void change(int index,const entry& ch);
 
 	int get_vec_size();
 
