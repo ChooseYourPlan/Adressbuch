@@ -10,7 +10,7 @@
 TEST_CASE("WINS/DRAWS") {
 		TTT g1;
 		SECTION("CHECK") {
-				for(int i = 0; i < 1000; i++)
+				for(int i = 0; i < 10000; i++)
 						CHECK(g1.game(false) < 1);
 		}
 }
