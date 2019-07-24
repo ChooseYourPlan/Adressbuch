@@ -17,7 +17,7 @@ jobs:
       - run: ./myprog
       - run: ls -la
       - run: cd TTT-MiniMax && make
-      - run: cd TTT-MiniMax && ./TTT
+      - run: ./TTT
       - run: bash <(curl -s https://codecov.io/bash) -t 880fe762-07c1-4469-ab15-b46876d824da -s "." -s "./TTT-MiniMax"
 workflows:
   version: 2
