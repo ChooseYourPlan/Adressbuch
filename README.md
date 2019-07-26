@@ -288,12 +288,17 @@ TEST(FactorialTest, HandlesPositiveInput) {
 ## Fazit
 Alle 3 Frameworks unterstützen die automatische Registrierung von Test-Cases. Jedes Framework hat seine Stärken und Schwächen, für eine vollständige Lösung, würde ich Google-Test empfehlen. Wenn datengesteuertes Testen für Sie nützlich sind, können Sie Boost.Test + Boost.Turtle verwenden. Catch2 ist kleiner und nicht so umfangreich, aber auch leichter, wenn Sie nur eine Reihe von Unit-Tests durchführen möchten. Es macht einen sehr guten Job für Header-only.
 
-### <center> Codacy  : [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ffcc1b9424a54e399835eec803eef58f)](https://www.codacy.com/app/timweissenfels7/Catch2-Tests?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ChooseYourPlan/Catch2-Tests&amp;utm_campaign=Badge_Grade) </center>
+Codacy  : [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ffcc1b9424a54e399835eec803eef58f)](https://www.codacy.com/app/timweissenfels7/Catch2-Tests?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ChooseYourPlan/Catch2-Tests&amp;utm_campaign=Badge_Grade) </center>
 
-#### <p style="border:3px; border-style:solid; border-color:#34d158; padding: 1em;">CircleCI   Master Branch: [![CircleCI](https://circleci.com/gh/ChooseYourPlan/Catch2-Tests/tree/dev.svg?style=svg)](https://circleci.com/gh/ChooseYourPlan/Catch2-Tests/tree/master) CircleCI Dev Branch: [![CircleCI](https://circleci.com/gh/ChooseYourPlan/Catch2-Tests/tree/dev.svg?style=svg)](https://circleci.com/gh/ChooseYourPlan/Catch2-Tests/tree/dev)</p>
+CircleCI   Master Branch: [![CircleCI](https://circleci.com/gh/ChooseYourPlan/Catch2-Tests/tree/dev.svg?style=svg)](https://circleci.com/gh/ChooseYourPlan/Catch2-Tests/tree/master) 
+ CircleCI Dev Branch: [![CircleCI](https://circleci.com/gh/ChooseYourPlan/Catch2-Tests/tree/dev.svg?style=svg)](https://circleci.com/gh/ChooseYourPlan/Catch2-Tests/tree/dev)</p>
 
-#### <p style="border:3px; border-style:solid; border-color:#d13434; padding: 1em;"> Codecov  Master Branch: [![codecov](https://codecov.io/gh/ChooseYourPlan/Catch2-Tests/branch/master/graph/badge.svg)](https://codecov.io/gh/ChooseYourPlan/Catch2-Tests) <span>Codecov Dev Branch: [![codecov](https://codecov.io/gh/ChooseYourPlan/Catch2-Tests/branch/dev/graph/badge.svg)](https://codecov.io/gh/ChooseYourPlan/Catch2-Tests)</span></p>
+Codecov  Master Branch: [![codecov](https://codecov.io/gh/ChooseYourPlan/Catch2-Tests/branch/master/graph/badge.svg)](https://codecov.io/gh/ChooseYourPlan/Catch2-Tests) 
 
-#### <p style="border:3px; border-style:solid; border-color:#34d158; padding: 1em;">Travis-ci   Dev Branch: [![Build  ](https://travis-ci.com/ChooseYourPlan/Catch2-Tests.svg?branch=dev)](https://travis-ci.com/ChooseYourPlan/Catch2-Tests) Travis-ci   Master Branch: [![Build  ](https://travis-ci.com/ChooseYourPlan/Catch2-Tests.svg?branch=master)](https://travis-ci.com/ChooseYourPlan/Catch2-Tests) </p>
+Codecov Dev Branch: [![codecov](https://codecov.io/gh/ChooseYourPlan/Catch2-Tests/branch/dev/graph/badge.svg)](https://codecov.io/gh/ChooseYourPlan/Catch2-Tests)
 
-#### <p style="border:3px; border-style:solid; border-color:#73a816; padding: 1em;"> Coveralls   Master Branch: [![Coverage  ](https://coveralls.io/repos/github/ChooseYourPlan/Catch2-Tests/badge.svg)](https://coveralls.io/github/ChooseYourPlan/Catch2-Tests) ⠀ Coveralls   Dev Branch: [![Coverage  ](https://coveralls.io/repos/github/ChooseYourPlan/Catch2-Tests/badge.svg?branch=dev)](https://coveralls.io/github/ChooseYourPlan/Catch2-Tests?branch=dev)
+Travis-ci   Dev Branch: [![Build  ](https://travis-ci.com/ChooseYourPlan/Catch2-Tests.svg?branch=dev)](https://travis-ci.com/ChooseYourPlan/Catch2-Tests) Travis-ci   Master Branch: [![Build  ](https://travis-ci.com/ChooseYourPlan/Catch2-Tests.svg?branch=master)](https://travis-ci.com/ChooseYourPlan/Catch2-Tests) </p>
+
+Coveralls   Master Branch: [![Coverage  ](https://coveralls.io/repos/github/ChooseYourPlan/Catch2-Tests/badge.svg)](https://coveralls.io/github/ChooseYourPlan/Catch2-Tests) 
+ 
+ Coveralls Dev Branch: [![Coverage  ](https://coveralls.io/repos/github/ChooseYourPlan/Catch2-Tests/badge.svg?branch=dev)](https://coveralls.io/github/ChooseYourPlan/Catch2-Tests?branch=dev)
