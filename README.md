@@ -291,13 +291,16 @@ Alle 3 Frameworks unterstützen die automatische Registrierung von Test-Cases. J
 Codacy  : [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ffcc1b9424a54e399835eec803eef58f)](https://www.codacy.com/app/timweissenfels7/Catch2-Tests?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ChooseYourPlan/Catch2-Tests&amp;utm_campaign=Badge_Grade) </center>
 
 CircleCI   Master Branch: [![CircleCI](https://circleci.com/gh/ChooseYourPlan/Catch2-Tests/tree/dev.svg?style=svg)](https://circleci.com/gh/ChooseYourPlan/Catch2-Tests/tree/master) 
- CircleCI Dev Branch: [![CircleCI](https://circleci.com/gh/ChooseYourPlan/Catch2-Tests/tree/dev.svg?style=svg)](https://circleci.com/gh/ChooseYourPlan/Catch2-Tests/tree/dev)</p>
+
+CircleCI Dev Branch: [![CircleCI](https://circleci.com/gh/ChooseYourPlan/Catch2-Tests/tree/dev.svg?style=svg)](https://circleci.com/gh/ChooseYourPlan/Catch2-Tests/tree/dev)</p>
 
 Codecov  Master Branch: [![codecov](https://codecov.io/gh/ChooseYourPlan/Catch2-Tests/branch/master/graph/badge.svg)](https://codecov.io/gh/ChooseYourPlan/Catch2-Tests) 
 
 Codecov Dev Branch: [![codecov](https://codecov.io/gh/ChooseYourPlan/Catch2-Tests/branch/dev/graph/badge.svg)](https://codecov.io/gh/ChooseYourPlan/Catch2-Tests)
 
-Travis-ci   Dev Branch: [![Build  ](https://travis-ci.com/ChooseYourPlan/Catch2-Tests.svg?branch=dev)](https://travis-ci.com/ChooseYourPlan/Catch2-Tests) Travis-ci   Master Branch: [![Build  ](https://travis-ci.com/ChooseYourPlan/Catch2-Tests.svg?branch=master)](https://travis-ci.com/ChooseYourPlan/Catch2-Tests) </p>
+Travis-ci   Dev Branch: [![Build  ](https://travis-ci.com/ChooseYourPlan/Catch2-Tests.svg?branch=dev)](https://travis-ci.com/ChooseYourPlan/Catch2-Tests) 
+
+Travis-ci   Master Branch: [![Build  ](https://travis-ci.com/ChooseYourPlan/Catch2-Tests.svg?branch=master)](https://travis-ci.com/ChooseYourPlan/Catch2-Tests) </p>
 
 Coveralls   Master Branch: [![Coverage  ](https://coveralls.io/repos/github/ChooseYourPlan/Catch2-Tests/badge.svg)](https://coveralls.io/github/ChooseYourPlan/Catch2-Tests) 
  
