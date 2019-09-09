@@ -304,4 +304,4 @@ Travis-ci   Master Branch: [![Build  ](https://travis-ci.com/ChooseYourPlan/Catc
 
 Coveralls   Master Branch: [![Coverage  ](https://coveralls.io/repos/github/ChooseYourPlan/Catch2-Tests/badge.svg)](https://coveralls.io/github/ChooseYourPlan/Catch2-Tests) 
  
- Coveralls Dev Branch: [![Coverage  ](https://coveralls.io/repos/github/ChooseYourPlan/Catch2-Tests/badge.svg?branch=dev)](https://coveralls.io/github/ChooseYourPlan/Catch2-Tests?branch=dev)
+Coveralls Dev Branch: [![Coverage  ](https://coveralls.io/repos/github/ChooseYourPlan/Catch2-Tests/badge.svg?branch=dev)](https://coveralls.io/github/ChooseYourPlan/Catch2-Tests?branch=dev)
